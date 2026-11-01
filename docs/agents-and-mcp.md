@@ -8,16 +8,20 @@ Mapflyover connects to AI agents through the **Model Context Protocol (MCP)**. C
 2. Choose your client — **Claude**, **ChatGPT**, or another MCP-compatible client.
 3. Sign in with **OAuth 2.0** and approve the connection. There is no API key to paste and nothing to install.
 
+Clients that take a header instead (Claude Code, Cursor) can use a **personal access token** created in Mapflyover under **Settings → Agent access**, sent as `Authorization: Bearer YOUR_TOKEN`.
+
 Agent connection is available on every plan, including Free.
 
 ## What your agent can do
 
-Once connected, an agent works with 27 Mapflyover tools through the MCP endpoint to:
+Once connected, an agent works with 29 Mapflyover tools through the MCP endpoint to:
 
 - Create and open your Mapflyover projects
 - Build scenes from real places, in order
 - Add narration scripts and generate the voiceover and captions
 - Adjust project settings so the project is ready for you to review
+- **See the exact frames before handover** — `preview_frames` returns the real rendered frames of the saved video (satellite imagery, camera, titles, stat cards and captions) at the moments the agent chooses, so it checks the actual result, not a sketch
+- **Build for people with no account** — with `create_claim_link` the agent hands finished videos to someone who has not signed up yet; they claim the projects into their own library (see [Claim links](claim-links.md))
 
 A typical flow: you describe a video ("a flyover of the Silk Road from Xi'an to Istanbul, narrated, vertical"), the agent builds the project, and you open it in the Mapflyover editor to check it.
 
@@ -34,8 +38,8 @@ These limits are deliberate, and keep you in control of your account:
 | Item | Value |
 | --- | --- |
 | MCP endpoint | `https://mapflyover.com/api/mcp` |
-| Authorisation | OAuth 2.0 (authorization code + refresh token, PKCE S256) |
-| Tools | 27 |
+| Authorisation | OAuth 2.0 (dynamic registration, authorization code + refresh token, PKCE S256), or a personal access token |
+| Tools | 29 |
 | Official MCP Registry name | `com.mapflyover/mapflyover` |
 | Connect page | [mapflyover.com/agents](https://mapflyover.com/agents) |
 | Listing/documentation repo | [github.com/alihassan1437/mapflyover-mcp](https://github.com/alihassan1437/mapflyover-mcp) |

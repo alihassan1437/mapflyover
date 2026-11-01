@@ -58,8 +58,10 @@ Step-by-step: [How it works](https://mapflyover.com/how-it-works) · [Guides](ht
 
 Mapflyover speaks the Model Context Protocol (MCP). Connect Claude, ChatGPT or any MCP client with a single OAuth 2.0 sign-in — no API key to paste — and your agent can create and build Mapflyover projects from a plain description: scenes, narration and captions included. You stay in control: agents cannot export videos or spend credits, so you review the project and export it yourself in the editor with one click.
 
+Your agent can also build a video for someone who has no Mapflyover account and hand them a **claim link**: they open it, sign up with Google, press Claim, and the projects land in their own library. See [docs/claim-links.md](docs/claim-links.md).
+
 - Connect: [mapflyover.com/agents](https://mapflyover.com/agents)
-- MCP endpoint: `https://mapflyover.com/api/mcp` (27 tools)
+- MCP endpoint: `https://mapflyover.com/api/mcp` (29 tools)
 - Listed on the official MCP Registry as `com.mapflyover/mapflyover`
 - Agent documentation and directory files: [alihassan1437/mapflyover-mcp](https://github.com/alihassan1437/mapflyover-mcp)
 
@@ -80,6 +82,7 @@ Building, previews, narration and captions are free on every plan; the Free plan
 
 - [Features](docs/features.md) — the editor, narration, captions, camera moves and exports in detail
 - [Agents & MCP](docs/agents-and-mcp.md) — how AI agent connection works and what agents can and cannot do
+- [Claim links](docs/claim-links.md) — how an agent hands finished videos to someone who has no Mapflyover account yet
 - [Use cases](docs/use-cases.md) — travel, education, real estate, local business and social video
 - [Pricing](docs/pricing.md) — plans, limits and billing notes
 - [FAQ](docs/faq.md) — accounts, plans, exports, agents and support
